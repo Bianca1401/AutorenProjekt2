@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Kontakt";
+}
+@* <h1>@ViewData["Title"]</h1> *@
+
+<main class="Kontakt-background">
+   @*  <h1 class="Kontakt-Headline">Kontakt</h1> *@
+    <div class="text">
+        <p>
+            <br> Hast du Fragen zu meinen Büchern? Hast du Anmerkungen oder Anregungen?<br>
+            Ich freue mich auf Deine Nachricht!
+        </p>
+    </div>
+        
+    <!-- Formular beginnt hier -->
+     <form method="post">
+
+        <!-- Name-Eingabefeld -->
+            <div class="name">
+                <label for="name">Name:</label><br>
+                <input type="text" name="name" id="name" required placeholder="Dein Name"><br>
+            </div>
+
+        <!-- Email-Eingabefeld -->
+        <div class="email">
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email" required placeholder="example@email.com"><br>
+        </div>
+
+        <!-- Nachricht-Eingabefeld -->
+        <div class="nachricht">
+            <label for="Nachricht:">Nachricht:</label><br>
+            <textarea name="Nachricht:" id="nachricht" required placeholder="Deine Nachricht"></textarea><br>
+        </div>
+
+        <!-- Checkbox für Datenschutzerklärung -->
+        <div class="checkbox-box">
+            <label class="checkbox" for="myCheckboxId">
+                <input class="checkbox-input" type="checkbox" name="myCheckboxName" id="myCheckboxId">
+                Ich habe die Datenschutzerklärung zur Kenntnis genommen.
+            </label><br>
+        </div>
+
+        <!-- Absenden-Button -->
+        <button type="submit" id="button">Senden</button>
+
+    </form>
+</main>
+
+    
+

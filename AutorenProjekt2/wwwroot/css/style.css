@@ -1,0 +1,385 @@
+
+body {
+    width: 100%;
+    background-color: rgb(216, 218, 219);
+    font-family:"Cormorant", serif; 
+}
+
+
+
+.header {
+    box-shadow: 0 0.313rem 1.563rem rgba(48,48,48,.4);
+    background-image: url("/img/background.jpg");
+    background-size: cover;
+    margin-top: 0.5em;
+}
+
+.headline {  
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    font-size: 4em;
+    padding-top: 0.8em;
+}
+
+
+.subtitle {
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 3em;
+    padding: 0 0 0.5em 0;
+    margin-top: -0.5em;
+}
+
+/*navbar*/
+nav {
+    width: 100%;
+}
+
+
+#navi ul {
+display: flex;
+justify-content: center;
+margin-top: -0.5em;
+background-image: linear-gradient(to right,grey,white,grey);    /*Hintergrund- Farbverlauf */
+list-style: none;  /* kein Aufzählungszeichen */
+}
+
+
+#navi li a {
+    color: black;
+    text-decoration: none;
+    margin-left: 1em;
+    font-weight: bolder;
+    font-size: 2.2em;   
+   font-style: oblique;
+}
+
+
+#navi a:hover {
+    text-decoration: underline;
+}
+
+
+
+main {
+    width: 100%;
+    text-align: center;
+}
+
+
+.author-image{
+    width: 70%;
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+
+.h3-headline{
+    text-align: center;
+    font-size: 3em;
+    padding: 0.5em;
+}
+
+
+.text-startseite{
+    font-size: 1.5em;
+    max-width: 85%;
+    margin:auto; 
+}
+
+
+/*Fußzeile*/
+footer{
+    background-color:#3f3e3e;
+}
+.footer-Container {
+    width: 100%;
+    padding: 4em 1em 1em;
+}
+.social-Icons {
+    display: flex;
+    justify-content: center;
+}
+.social-Icons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.social-Icons a i {
+    font-size: 1.5em;
+    color: black;
+    opacity: 0.9;   
+}
+
+/*Hover Effects on Social Media Icons */
+
+.social-Icons a:hover {
+    background-color: #3f3e3e;
+    transition: 0.5s;   /* langsame Verdunkelung, wenn man über die Icons fährt */
+}
+
+.social-Icons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+
+.footerNav {
+    margin: 30px,0;
+}
+
+
+.footerNav ul {
+    display:flex;
+    justify-content: center;
+    list-style: none;
+}
+
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.5em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+
+.footerNav ul li a:hover {
+    opacity: 1;             /* Undurchsichtigkeit / Transparenz */
+}
+
+
+/* Impressum CSS */ /*Datenschutz CSS*/
+
+
+.impressum, .Datenschutz {
+    font-size: 1.2em;
+    background-image: url("/img/background.jpg");
+    background-attachment: fixed;
+    padding:5em;
+    width: 100%;
+}
+
+
+/*Über Mich Seite */
+
+
+.img-Über-Mich{
+    width: 65%;
+    padding: 1.5em; 
+}
+
+
+.Meine-Geschichte, .Text-Mein-Weg, .text {
+    font-size: 1.3em;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-bottom: 1em;
+    margin-bottom: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.Über-Mich-Headline,.Mein-Weg-zur-Autorin,.Kontakt-Headline{
+    font-size: 2.5em;
+    font-style: oblique;
+    padding: 0.3em;
+}
+
+.rahmen{
+    padding: 2.4em;
+}
+.Buch-cover{
+    float: left;
+    width: 20%;
+}
+.Buchtext{
+    float: right;
+    width: 80%;
+    font-size: 2em;
+   padding-top: 1.5em;
+}
+.clearbox {
+    clear: both;
+}
+
+.Buchtitel{
+    font-size: 2.4em;
+       text-align: left;
+       margin-left: 1em;
+    }
+    
+
+.Bücher-headline{
+    font-size: 4em;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+/*Hintergründe*/
+
+.books-background{
+    background-image: url("/img/background.jpg");
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+
+.über-mich-background{
+    background-image: url("/img/bulb.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.Kontakt-background{
+   background-image: url("/img/notizbuch2.jpg");
+   background-size: cover;
+   background-attachment: scroll;
+   background-repeat: no-repeat;
+   padding: 0em;
+   margin-bottom: 1.5em;
+   
+}
+
+.Startseite-background{
+    background-image: url("/img/background.jpg");
+}
+
+
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin: 1em;
+}
+
+
+
+.name,.email,.nachricht{
+font-size: 1.8em;
+margin: 1em;
+}
+
+
+
+#name,#email{
+    font-size: 0.5em;
+    width: 20em;
+}
+
+
+#nachricht{
+font-size: 0.5em;
+height: 7em;
+width: 20em;
+}
+
+
+#button{
+    width: 15%;
+    margin: 4em;
+    height: 3em;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #929191a2;
+}
+
+
+
+
+/*@media only screen and (max-width: 768px) {*/
+    /* For mobile phones: */
+    /*.header, .author-image, .h3-headline, .text-startseite, .footer-Container,.social-Icons{
+      width: 100%;
+    }
+    .Buch-cover{
+        width: 100%;
+    }
+    .Buchtext{
+        width: 100%;
+    }
+
+    #navi ul li{
+        max-width: 100%;
+    }
+    #navi ul {
+        display: inline-block;
+        justify-content: center;
+        margin-top: 2em;
+        background-image: none;    
+        list-style: none;
+     }
+    .impressum,.Datenschutz{
+         font-size:2em;
+         background-image: url(/image/background.jpg);
+          background-attachment: scroll;
+         padding: 0em;
+     }
+    .name,.email,.nachricht{
+         font-size: 3em;
+         margin: 0em;
+      }
+
+    #name,#email{
+         font-size: 0.7em;
+          width: 10em;
+          margin-left: -1em;
+    }
+
+    #nachricht{
+         font-size: 0.7em;
+         height: 7em;
+          width: 13em;
+        margin-left: -1em;
+     }
+
+     .checkbox {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 2em;
+        margin: 1em;
+        font-weight: bolder;
+        color: #000000;
+        padding: 1em;
+    }
+
+     .Kontakt-background{
+        background-image: url(/image/notizbuch2.jpg);
+        background-size: cover;
+        background-position: 32%;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        padding: 1em;
+     }
+
+     .footerNav ul li a {
+        color: white;
+        margin: 7px;
+        text-decoration: none;
+        font-size: 1.3em;
+     }
+}
+
+
+
+  @media only screen and (min-width: 1024px) {*/
+    /* For Desktop: */
+    /*.header, .author-image, .h3-headline, .text-startseite, .footer-Container, .social-Icons {
+      width: 100%;
+    }
+    #navi ul li{
+        max-width: 25%;
+    }
+  }*/
+
+  

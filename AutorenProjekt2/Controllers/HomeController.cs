@@ -17,11 +17,28 @@ namespace AutorenProjekt2.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        
+        public IActionResult UberMich()
         {
             return View();
         }
+
+        public IActionResult Kontakt()
+        {
+            return View();
+        }
+
+        public IActionResult Datenschutz()
+        {
+            return View();
+        }
+
+        public IActionResult Impressum()
+        {
+            return View();
+        }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

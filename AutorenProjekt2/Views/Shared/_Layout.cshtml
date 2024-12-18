@@ -1,46 +1,65 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - AutorenProjekt2</title>
+
+    @* <title>@ViewData["Title"] - AutorenProjekt2</title> *@
+    <title>Adeline Meadows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
     <link rel="stylesheet" href="~/AutorenProjekt2.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" media="screen">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AutorenProjekt2</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+          <div class="header">
+            <h1 class="headline">Adeline Meadows</h1>
+            <h2 class="subtitle">Autorin</h2>
+        </div>  
     </header>
+
+    <div id="navi">
+            <ul>
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Startseite</a> </li>
+               @*  <li><a href="Bücher.html" title="Bücher">Bücher</a></li> *@
+                 <li><a asp-area="" asp-controller="Home" asp-action="UberMich">Über Mich</a> </li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Kontakt">Kontakt</a> </li>
+              @*   <li> <a asp-area="" asp-controller="Home" asp-action="Index">Home</a> </li>*@     
+            </ul>
+     </div>
+            
+       
+    
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="Startseite-background">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - AutorenProjekt2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer>
+        <div class="footer-Container">
+            <div class="social-Icons">
+                <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+                <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" title="Youtube"><i class="fa  fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Kontakt">Kontakt</a> </li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Impressum">Impressum</a> </li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Datenschutz">Datenschutz</a> </li>
+                    <li><a href="#navi" title="nach Oben">nach Oben</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

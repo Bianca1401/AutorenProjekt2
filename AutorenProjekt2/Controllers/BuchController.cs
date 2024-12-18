@@ -54,7 +54,7 @@ namespace AutorenProjekt2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Buchtitel,Klappentext,Preis,Erscheinungsdatum,ISBN")] Buch buch)
+        public async Task<IActionResult> Create([Bind("Id,Buchtitel,Klappentext,Preis,Erscheinungsdatum,ISBN,BuchCover")] Buch buch)
         {
             if (ModelState.IsValid)
             {

@@ -90,7 +90,7 @@ namespace AutorenProjekt2.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["BuchId"] = new SelectList(_context.Buch, "Id", "Id", rezension.BuchId);
+            ViewData["BuchId"] = new SelectList(_context.Buch, "Id", "Buchtitel", rezension.BuchId);
             return View(rezension);
         }
 
@@ -107,7 +107,7 @@ namespace AutorenProjekt2.Controllers
             {
                 return NotFound();
             }
-            ViewData["BuchId"] = new SelectList(_context.Buch, "Id", "Id", rezension.BuchId);
+            ViewData["BuchId"] = new SelectList(_context.Buch, "Id", "Buchtitel", rezension.BuchId);
             return View(rezension);
         }
 
@@ -143,7 +143,7 @@ namespace AutorenProjekt2.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["BuchId"] = new SelectList(_context.Buch, "Id", "Id", rezension.BuchId);
+            ViewData["BuchId"] = new SelectList(_context.Buch, "Id", "Buchtitel", rezension.BuchId);
             return View(rezension);
         }
 

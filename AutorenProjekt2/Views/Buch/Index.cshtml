@@ -13,22 +13,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Buchtitel)
+             @*    @Html.DisplayNameFor(model => model.Buchtitel) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Klappentext)
+               @*  @Html.DisplayNameFor(model => model.Klappentext) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Preis)
+                @* @Html.DisplayNameFor(model => model.Preis) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Erscheinungsdatum)
+               @*  @Html.DisplayNameFor(model => model.Erscheinungsdatum) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ISBN)
+               @*  @Html.DisplayNameFor(model => model.ISBN) *@
             </th>
             <th>
-                Buch Cover
+               @*  Buch Cover *@
             </th>
             <th></th>
         </tr>
@@ -36,25 +36,26 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+                <td>
+                <img src="@Html.DisplayFor(modelItem => item.BuchCover)" alt="@Html.DisplayFor(modelItem => item.Buchtitel)">
+
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Buchtitel)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Klappentext)
+               @*  @Html.DisplayFor(modelItem => item.Klappentext) *@
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Preis)
+               @*  @Html.DisplayFor(modelItem => item.Preis) *@
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Erscheinungsdatum)
+               @*  @Html.DisplayFor(modelItem => item.Erscheinungsdatum) *@
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ISBN)
+               @*  @Html.DisplayFor(modelItem => item.ISBN) *@
             </td>
-                <td>
-                    <img src="@Html.DisplayFor(modelItem => item.BuchCover)" alt="@Html.DisplayFor(modelItem => item.Buchtitel)">
-                   
-                </td>
+                
             <td>
                 @* <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> | *@
                     <a asp-controller="Rezension" asp-action="BuchRezension" asp-route-id="@item.Id">Details</a> |

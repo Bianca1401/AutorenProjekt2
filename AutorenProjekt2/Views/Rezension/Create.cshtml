@@ -4,16 +4,16 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Deine Meinung macht meine Geschichten lebendig – ich freue mich auf deine Worte!</h1>
 
-<h4>Rezension</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="BuchId" class="control-label"></label>
+                <label asp-for="BuchId" class="control-label">Buchtitel</label>
                 <select asp-for="BuchId" class ="form-control" asp-items="ViewBag.BuchId"></select>
             </div>
             <div class="form-group">

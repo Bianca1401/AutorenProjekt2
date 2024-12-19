@@ -73,7 +73,7 @@ namespace AutorenProjekt2.Controllers
         // GET: Rezension/Create
         public IActionResult Create()
         {
-            ViewData["BuchId"] = new SelectList(_context.Buch, "Id", "Id");
+            ViewData["BuchId"] = new SelectList(_context.Buch, "Id", "Buchtitel");
             return View();
         }
 

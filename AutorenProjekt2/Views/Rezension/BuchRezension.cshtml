@@ -10,6 +10,7 @@
 <div>
     <h3>Buchdetails</h3>
     <p><strong>Titel:</strong> @Model.Buchtitel</p>
+    <p> <img src="@Model.BuchCover" alt="@Model.Buchtitel" style="max-width: 200px; height: auto;" /></p>
     <p><strong>Klappentext:</strong> @Model.Klappentext</p>
     <p><strong>Preis:</strong> @Model.Preis €</p>
     <p><strong>Erscheinungsdatum:</strong> @Model.Erscheinungsdatum.ToShortDateString()</p>

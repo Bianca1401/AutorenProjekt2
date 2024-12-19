@@ -34,34 +34,48 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-                <td>
-                <img src="@Html.DisplayFor(modelItem => item.BuchCover)" alt="@Html.DisplayFor(modelItem => item.Buchtitel)">
 
-                </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Buchtitel)
-            </td>
-            <td>
+
+
+        <div class="BuecherGalerie">
+            @foreach (var item in Model)
+            {
+                <div>
+                    <a asp-action="BuchRezension" asp-controller="Rezension" asp-route-id="@item.Id">
+                        <img src="@item.BuchCover" alt="@item.Buchtitel" />
+                    </a>
+                    <p>@item.Buchtitel</p>
+                </div>
+            }
+        </div>
+
+
+
+
+  
+
+        @* @Html.DisplayFor(modelItem => item.Buchtitel) *@
+            
                @*  @Html.DisplayFor(modelItem => item.Klappentext) *@
-            </td>
-            <td>
+           
                @*  @Html.DisplayFor(modelItem => item.Preis) *@
-            </td>
-            <td>
+           
                @*  @Html.DisplayFor(modelItem => item.Erscheinungsdatum) *@
-            </td>
-            <td>
+          
                @*  @Html.DisplayFor(modelItem => item.ISBN) *@
-            </td>
-                
-            <td>
+          
                 @* <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> | *@
-                    <a asp-controller="Rezension" asp-action="BuchRezension" asp-route-id="@item.Id">Details</a> |
+
+
+
+                    @* <a asp-controller="Rezension" asp-action="BuchRezension" asp-route-id="@item.Id">Details</a>  *@
+
+
                @*  <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> *@
-            </td>
-        </tr>
-}
+
+
+
+          
+
     </tbody>
 </table>

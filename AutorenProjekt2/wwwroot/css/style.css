@@ -192,9 +192,11 @@ footer{
     padding: 0.3em;
 }
 
-.rahmen{
+.rahmen {
     padding: 2.4em;
+    
 }
+/*
 .Buch-cover{
     float: left;
     width: 20%;
@@ -220,7 +222,7 @@ footer{
     font-size: 4em;
     font-style: italic;
     text-decoration: underline;
-}
+}*/
 
 /*Hintergründe*/
 

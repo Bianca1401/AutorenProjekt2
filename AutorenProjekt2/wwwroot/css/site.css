@@ -7,8 +7,8 @@
     font-size: 16px;
   }
 }
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+*/
+/*.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
@@ -20,3 +20,33 @@ html {
 body {
   margin-bottom: 60px;
 }*/
+
+.BuecherGalerie {
+    display: grid; /* Grid Layout verwenden */
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
+    gap:5px; /* Abstand zwischen den Elementen */
+    justify-items:safe center; /* Zentriert die Elemente horizontal */
+    
+    margin: 25px auto; /* Zentriert das gesamte Grid */
+}
+
+    .BuecherGalerie div {
+        text-align: center; /* Zentriert den Text */
+        font-size: 1.7em;
+        max-width: 200px; /* Maximale Breite eines Bildes */
+    }
+
+    .BuecherGalerie img {
+        width: 100%; /* Bild an die Breite des Containers anpassen */
+        margin-top: auto;
+        border-radius: 5px; /* Abgerundete Ecken */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Schatteneffekt */
+        cursor: pointer; /* Hand-Mauszeiger bei Hover */
+        transition: transform 0.3s ease; /* Leichte Animation bei Hover */
+    }
+
+        .BuecherGalerie img:hover {
+            transform: scale(1.05); /* Vergrößerung beim Hover */
+        }
+
+

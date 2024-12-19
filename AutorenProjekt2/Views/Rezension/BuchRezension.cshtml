@@ -1,54 +1,51 @@
-﻿@model IEnumerable<AutorenProjekt2.Models.Rezension>
+﻿@model AutorenProjekt2.Models.Buch
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Rezensionen für @Model.Buchtitel";
 }
 
-<h1>Index</h1>
+<h1>Rezensionen für "@Model.Buchtitel"</h1>
+
+<!-- Buchdetails -->
+<div>
+    <h3>Buchdetails</h3>
+    <p><strong>Titel:</strong> @Model.Buchtitel</p>
+    <p><strong>Klappentext:</strong> @Model.Klappentext</p>
+    <p><strong>Preis:</strong> @Model.Preis €</p>
+    <p><strong>Erscheinungsdatum:</strong> @Model.Erscheinungsdatum.ToShortDateString()</p>
+</div>
+
+<hr />
+
+<!-- Rezensionen anzeigen -->
+<h3>Rezensionen</h3>
+@if (Model.Rezensionen != null && Model.Rezensionen.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Kommentar</th>
+                <th>Bewertung</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var rezension in Model.Rezensionen)
+            {
+                <tr>
+                    <td>@rezension.Name</td>
+                    <td>@rezension.Kommentar</td>
+                    <td>@rezension.Bewertung von 5 Sternen</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Es sind noch keine Rezensionen für dieses Buch vorhanden.</p>
+}
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" asp-route-id="@Model.Id" class="btn btn-primary">Rezension schreiben</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Kommentar)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Bewertung)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Bücher)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Kommentar)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Bewertung)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Bücher.Id)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>

@@ -26,6 +26,7 @@ namespace AutorenProjekt2.Controllers
             return View(await autorenProjekt2Context.ToListAsync());
         }
 
+
         // GET: Rezension/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -44,6 +45,30 @@ namespace AutorenProjekt2.Controllers
 
             return View(rezension);
         }
+
+        public async Task<IActionResult> BuchRezension(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            // Buch mit Rezensionen laden
+            var buch = await _context.Buch
+                .Include(b => b.Rezensionen) // Rezensionen mitladen
+                .FirstOrDefaultAsync(b => b.Id == id);
+
+            if (buch == null)
+            {
+                return NotFound();
+            }
+
+            return View(buch);
+        }
+
+
+
+
 
         // GET: Rezension/Create
         public IActionResult Create()

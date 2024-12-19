@@ -68,8 +68,6 @@ namespace AutorenProjekt2.Controllers
 
 
 
-
-
         // GET: Rezension/Create
         public IActionResult Create()
         {
@@ -88,7 +86,7 @@ namespace AutorenProjekt2.Controllers
             {
                 _context.Add(rezension);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("BuchRezension", "Rezension", new { id = rezension.BuchId });
             }
             ViewData["BuchId"] = new SelectList(_context.Buch, "Id", "Buchtitel", rezension.BuchId);
             return View(rezension);

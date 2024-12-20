@@ -24,20 +24,23 @@ body {
 .BuecherGalerie {
     display: grid; /* Grid Layout verwenden */
     grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
-    gap:5px; /* Abstand zwischen den Elementen */
-    justify-items:safe center; /* Zentriert die Elemente horizontal */
-    
-    margin: 25px auto; /* Zentriert das gesamte Grid */
+    grid-row-gap: 0.1px;
+    grid-gap: 0.5px; /* Abstand zwischen den Elementen */
+    justify-items: center; /* Zentriert die Elemente horizontal */
+
+    margin: 2px auto; /* Zentriert das gesamte Grid */
 }
 
     .BuecherGalerie div {
+        margin-top: 2em;
         text-align: center; /* Zentriert den Text */
         font-size: 1.7em;
+        font-style: oblique;
         max-width: 200px; /* Maximale Breite eines Bildes */
     }
 
     .BuecherGalerie img {
-        width: 100%; /* Bild an die Breite des Containers anpassen */
+        width: 130%; /* Bild an die Breite des Containers anpassen */
         margin-top: auto;
         border-radius: 5px; /* Abgerundete Ecken */
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Schatteneffekt */
@@ -49,4 +52,25 @@ body {
             transform: scale(1.05); /* Vergrößerung beim Hover */
         }
 
+.buchKlappentext {
+    font-size: 25px;
+    text-align: center;
+    margin: 55px;
+}
 
+.preis {
+    font-size: 25px;
+}
+
+.erscheinungsdatum {
+    font-size: 22px;
+}
+
+.ueberschriftRez{
+    font-size: 25px;
+}
+
+.rezInhalt{
+    font-size:20.5px;
+    font-weight:600;
+}

@@ -9,21 +9,21 @@
 <!-- Buchdetails -->
 <div>
     <h3>Buchdetails</h3>
-    <p><strong>Titel:</strong> @Model.Buchtitel</p>
-    <p> <img src="@Model.BuchCover" alt="@Model.Buchtitel" style="max-width: 200px; height: auto;" /></p>
-    <p><strong>Klappentext:</strong> @Model.Klappentext</p>
-    <p><strong>Preis:</strong> @Model.Preis €</p>
-    <p><strong>Erscheinungsdatum:</strong> @Model.Erscheinungsdatum.ToShortDateString()</p>
+   @*  <p><strong>Titel:</strong> @Model.Buchtitel</p> *@
+    <p> <img src="@Model.BuchCover" alt="@Model.Buchtitel" style="max-width: 500px; height: auto;" /></p>
+    <p class="buchKlappentext"> @Model.Klappentext</p>
+    <p class="preis"><strong>Preis:</strong> @Model.Preis €</p>
+    <p class="erscheinungsdatum"><strong>Erscheinungsdatum:</strong> @Model.Erscheinungsdatum.ToShortDateString()</p>
 </div>
 
 <hr />
 
 <!-- Rezensionen anzeigen -->
-<h3>Rezensionen</h3>
+<h1>Rezensionen</h1>
 @if (Model.Rezensionen != null && Model.Rezensionen.Any())
 {
     <table class="table">
-        <thead>
+        <thead class="ueberschriftRez">
             <tr>
                 <th>Name</th>
                 <th>Kommentar</th>
@@ -33,7 +33,7 @@
         <tbody>
             @foreach (var rezension in Model.Rezensionen)
             {
-                <tr>
+                <tr class="rezInhalt">
                     <td>@rezension.Name</td>
                     <td>@rezension.Kommentar</td>
                     <td>@rezension.Bewertung von 5 Sternen</td>
